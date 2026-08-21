@@ -1,0 +1,14 @@
+services:
+  Nginx:
+    image: nginx:1.27-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - Cache:/var/cache/nginx/osm:z
+      - ./web/nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl
+    restart: unless-stopped
+
+volumes:
+  Cache:
