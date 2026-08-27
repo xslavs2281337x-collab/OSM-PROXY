@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-
+cd /usr/local/bin/OSM-PROXY
 
 if [[ -d ./logs ]]; then
 	exec > ./logs/log 
