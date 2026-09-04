@@ -10,4 +10,5 @@ jobs:
           hostname
           pwd
           ls
-          cat /etc/os-release
+          cat /etc/os-release!!#
+          cat /etc/psdas
