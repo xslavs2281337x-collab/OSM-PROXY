@@ -1,14 +1,26 @@
-name: hello
-on: [push]
+name: deploy-test
+on:
+  push:
+    branches: [ main ]
 
 jobs:
-  firts:
+  check-ssh:
     runs-on: ubuntu-latest
     steps:
-      - name: What is it? 
+      - name: install ssh client
         run: |
-          hostname
-          pwd
-          ls
-          cat /etc/os-release!!#
-          cat /etc/psdas
+          apt-get update -qq
+          apt-get install -y -qq openssh-client
+
+      - name: setup key
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ vars.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+
+      - name: connect
+        run: |
+          ssh -i ~/.ssh/id_ed25519 deploy@${{ vars.DEPLOY_HOST }} \
+            'hostname && docker ps --format "{{ "{{" }}.Names{{ "}}" }}"'
