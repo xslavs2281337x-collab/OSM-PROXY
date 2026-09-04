@@ -10,4 +10,4 @@ jobs:
           hostname
           pwd
           ls
-          cat /etc/os-releasead
+          cat /etc/os-release
