@@ -23,4 +23,4 @@ jobs:
       - name: connect
         run: |
           ssh -i ~/.ssh/id_ed25519 deploy@${{ vars.DEPLOY_HOST }} \
-            'hostname && docker ps --format "{{ "{{" }}.Names{{ "}}" }}"'
+            'hostname && docker ps
