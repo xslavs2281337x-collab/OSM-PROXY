@@ -1,0 +1,13 @@
+name: hello
+on: [push]
+
+jobs:
+  firts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: What is it? 
+        run: |
+        hostname
+        pwd
+        ls
+        cat /etc/os-release
