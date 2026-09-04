@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: What is it? 
         run: |
-        hostname
-        pwd
-        ls
-        cat /etc/os-release
+          hostname
+          pwd
+          ls
+          cat /etc/os-release
