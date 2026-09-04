@@ -24,3 +24,11 @@ jobs:
         run: |
           ssh -i ~/.ssh/id_ed25519 deploy@${{ vars.DEPLOY_HOST }}
           hostname && docker ps
+            - name: deploy
+      - run: |
+          ssh -i ~/.ssh/id_ed25519 deploy@${{ vars.DEPLOY_HOST }} '
+            cd /usr/local/bin/OSM-PROXY &&
+            git pull &&
+            docker compose up -d --no-deps <сервис>
+          '
+        
