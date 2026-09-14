@@ -1,4 +1,5 @@
 # OSM-PROXY
+
 Кеширующий reverse-proxy для тайлов OpenStreetMap. Разворачивается в Docker Compose, отдаёт тайлы корпоративной ГИС из локального кеша.
 
 ## Зачем
@@ -8,7 +9,6 @@
 ```
 ГИС ──> nginx (кеш + TLS) ──> tile.openstreetmap.org
 ```
-MERGE
 ## Стек
 - nginx `1.27-alpine` (reverse proxy + `proxy_cache`)
 - Docker Compose
@@ -35,7 +35,6 @@ docker compose up -d           # поднять в фоне
 docker compose ps              # статус (ожидается Up)
 docker compose logs -f nginx   # логи (следить за стартом)
 ```
-MERGE
 ## Проверка
 
 ```bash
