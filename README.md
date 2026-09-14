@@ -15,8 +15,6 @@
 - TLS: wildcard-сертификат `*.loesk.ru` (GlobalSign)
 
 ## Структура
-
-MERGE
 ```
 OSM-PROXY/
 ├── docker-compose.yaml
