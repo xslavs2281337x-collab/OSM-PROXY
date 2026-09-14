@@ -10,7 +10,7 @@
 ```
 
 ## Стек
-
+merge 
 - nginx `1.27-alpine` (reverse proxy + `proxy_cache`)
 - Docker Compose
 - TLS: wildcard-сертификат `*.loesk.ru` (GlobalSign)
