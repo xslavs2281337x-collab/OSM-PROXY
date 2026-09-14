@@ -35,7 +35,7 @@ docker compose up -d           # поднять в фоне
 docker compose ps              # статус (ожидается Up)
 docker compose logs -f nginx   # логи (следить за стартом)
 ```
-
+MERGE
 ## Проверка
 
 ```bash
