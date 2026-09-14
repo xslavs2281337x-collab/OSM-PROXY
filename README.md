@@ -17,6 +17,7 @@ merge
 
 ## Структура
 
+MERGE
 ```
 OSM-PROXY/
 ├── docker-compose.yaml
