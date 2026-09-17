@@ -1,6 +1,6 @@
 # OSM-PROXY
 Кеширующий reverse-proxy для тайлов OpenStreetMap. Разворачивается в Docker Compose, отдаёт тайлы корпоративной ГИС из локального кеша.
-
+sd
 ## Зачем
 1)
 2)
